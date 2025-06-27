@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+} 
+
+:root{
+    --cor-preta: #000;
+    --cor-branca: #FFF;
+    --verde-principal:#3EB24B;
+    --verde-secundario:#B5FFB3;
+   
+}
+ /*definições do body*/
+body{
+    background-color: var(--cor-branca);
+    padding: 0 1rem;
+}
+
+/*Estilo da borda para o header, footer, e para as classes: sec-principal e sec-cursos*/
+header, 
+.sec-cursos,
+footer {
+    border-color: var(--cor-preta);
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    padding: 1.25rem;
+
+}
+
+header img{
+    display: block;
+    margin: 1rem auto;
+}
+
+/*alinhando os itens do menu com display grid: o grid tem duas colunas com a divisão de espaço igual entre as duas colunas */
+header nav{
+    display: flex;
+    margin: 1rem auto 0;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
+/*Estilo, tamamnho e espaçamento dos links do nav*/
+nav a {
+    color: var(--cor-preta);
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+
+
+/*Aplica-se alinhamento para direita apenas nos links impares, isso faz os links ficarem mais próximos em telas pequenas */
+header nav a:nth-child(2n-1) {
+    text-align: right;
+}
+
+
+/*Estilo dos botões*/
+.button{
+    background-color: var(--verde-principal);
+    border: 2px solid var(--cor-preta);
+    box-shadow: 4px 4px 0 var(--cor-preta);
+    color: var(--cor-preta);
+    display: block;
+    font-size: 1,25rem;
+    padding: 0.75rem 1rem;
+    max-width: 14rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+h2{
+    font-size: 2.5rem;
+}
+
+/* titulo antes dos cards */
+
+.t-cursos {
+    margin: 20px 10px;
+    padding: 0.85rem;
+    text-align: center;
+}
+
+
+/*Classe da section que contem todos os cards dos guias (cursos)*/
+
+.sec-cursos{
+    padding-bottom: 8rem;
+}
+
+
+
+/*Classe da div que engloba todos os articles*/
+.cards-cursos{
+    display: flex;
+    flex-direction: column;
+    /*align-items: start;*/
+    gap: 2.25rem;
+    margin-bottom: 4rem;
+}
+
+/*Classe que corresponde ao estilo, espaçamento de cada card individual em seu conteúdo interno */
+.card{
+    background-color: var(--verde-principal);
+    border: 2px solid var(--cor-preta);
+    box-shadow: 4px 4px 0 var(--cor-preta);
+    max-width: 20rem;
+    padding: 2rem 0 0 2rem;
+}
+
+/*alinhamento e cor dos cards pares*/
+.card:nth-child(2n){
+    /*align-self: end;*/
+    background-color: var(--verde-secundario);
+}
+
+/*Ajuste da disposição, espaçamento e tamanho da fonte do conteúdo escrito do card*/
+.card strong{
+    display: block;
+    font-size: 1.5rem;
+    margin: 1rem 1rem 0;
+}
+
+
+/*Alinhando o paragrafo dos cards*/
+.alinha-txt{
+    /*text-align: justify-all;*/
+    word-wrap: break-word;
+    margin: 0.4rem;
+   
+}
+
+/*Links dos cards ajustando a seta para direita e direcionando para abaixo no componente*/
+.card a{
+    display: block;
+    margin: 3rem 0 0 auto;
+    width: fit-content; /*Largura se ajusta ao conteúdo*/
+    
+}
+
+
+
+footer{
+    border-bottom: 0;
+    padding: 1rem 1.25rem 4rem; /*1rem para cima, 1.25rem para os lados, 4rem para baixo*/
+    text-align: center;
+}
+
+footer nav a{
+    display: block;
+    padding-left: 0;
+    text-align: center;
+}
+
+
+ 
+/*Ajustes gerais nos elementos da classe download-mat no footer: tag p e do botão (conteúdo download)*/
+.download-mat,button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: auto;
+    font-weight: bold;
+    font-size: 1.1rem;  /* tamanho fonte do botão -- 17.6px*/
+    
+
+}
+
+/*Ajuste de espaçamento e tamanho da fonte na tag p no footer (conteúdo download)*/
+.about-mat{
+    margin: 0.5rem;
+    padding: 0.3rem;
+    font-size: 1.3rem; /*tamanho da fonte da tag p -- 20.8px */
+    
+
+}
+
+/*mudando a cor do botão no footer ao passar o mouse (conteúdo download)*/
+.download-mat.div, button:hover{
+    background-color: var(--cor-branca);
+}
+
+
+/* Classes genericas para ajustar as margens e textos*/
+
+.margem-topo-1{
+    margin-top: 1rem;
+}
+
+.margem-topo-2{
+    margin-top: 2rem;
+}
+
+.margem-baixo-1{
+    margin-bottom: 1rem;
+}
+
+.margem-baixo-2{
+    margin-bottom: 2rem;
+}
+
+.mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.texto-primario{
+    color: var(--verde-principal);
+}
+
+.texto-centro{
+    text-align: center;
+}
+
+
+/* RESPONSIVIDADE DO SITE */
+
+/* Telas: 40rem -- 640px*/
+@media screen and (min-width: 40rem) {
+    header nav{
+        display: block;
+        text-align: center;
+    }
+
+    .cards-cursos{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /*.card:nth-child(2n){
+        margin-top: 1rem; /*margem pra cima então empurra o itens para baixo*/
+    }/*
+
+}
+
+ /* Telas 48rem -- 768px*/
+@media screen and (min-width: 48rem){
+    header div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    header img,
+    header nav,
+    header .button{
+        margin: 0;
+    }
+
+}
+
+ /*Tamanho Desktop 72rem -- 1152px*/
+
+@media  screen and (min-width: 72rem) {
+    
+    h1, h2 {
+        font-size: 4rem;
+    } /*Ajustar o texto para o tamanho de 64px*/
+    
+    .container{
+        display: flex;
+        align-items:center;
+        margin: 0 auto; /* 0 ne vertical, auto na horizontal */
+        max-width: 72rem;
+        
+        
+       
+    }
+
+
+/*Ajustando o texto para esquerda*/
+    .container.row-reverse{
+        flex-direction: row-reverse;
+    }
+
+    /*Ajuste sutil nos elementos do footer desktop */
+    .about-column{
+        text-align: justify;
+
+    } 
+
+    /*Ajustes no paragrafo*/
+    .about-column p{
+        font-size: 1.25rem;
+        max-width: 16rem;
+        text-align: center;
+    } 
+
+
+    /*ajustando o espaço que os links da nav vão ocupar no footer*/
+    footer nav{
+        flex: 2;
+    
+    } 
+
+}
+ 
+/* Telas full hd 80rem -- 1280px*/
+@media screen and (min-width: 80rem){
+
+    .container{
+        max-width: 80rem;
+    }
+}

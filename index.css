@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+} 
+
+:root{
+    --cor-preta: #000;
+    --cor-branca: #FFF;
+    --verde-principal:#3EB24B;
+    --verde-secundario:#B5FFB3;
+   
+}
+ /*definições do body*/
+body{
+    background-color: var(--cor-branca);
+    padding: 0 1rem;
+}
+
+/*Estilo da borda para o header, footer, e para as classes: sec-principal e sec-cursos*/
+header, 
+.sec-principal, 
+.sec-cursos,
+footer {
+    border-color: var(--cor-preta);
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    padding: 1.25rem;
+
+}
+
+header img{
+    display: block;
+    margin: 1rem auto;
+}
+
+/*alinhando os itens do menu com display grid: o grid tem duas colunas com a divisão de espaço igual entre as duas colunas */
+header nav{
+    display: flex;
+    margin: 1rem auto 0;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
+/*Estilo, tamamnho e espaçamento dos links do nav*/
+nav a {
+    color: var(--cor-preta);
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    text-decoration: none;
+}
+
+
+/*Aplica-se alinhamento para direita apenas nos links impares, isso faz os links ficarem mais próximos em telas pequenas */
+header nav a:nth-child(2n-1) {
+    text-align: right;
+}
+
+header nav a:nth-child(5n){
+    padding-left: 0;
+}
+
+
+/*Estilo dos botões*/
+.button{
+    background-color: var(--verde-principal);
+    border: 2px solid var(--cor-preta);
+    box-shadow: 4px 4px 0 var(--cor-preta);
+    color: var(--cor-preta);
+    display: block;
+    font-size: 1,25rem;
+    padding: 0.75rem 1rem;
+    max-width: 14rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/*Ajusta o espaçamento interno da seção principal*/
+.sec-principal{
+    padding-right: 0;
+    padding-bottom: 16rem;
+}
+
+/*ajusta a imagem na sessão principal*/
+.sec-principal img{
+    display: block;
+    margin: 1.25rem 0 0 auto;
+    max-width: 100%;
+}
+
+
+h1{
+    font-size: 3rem;
+    line-height: 105%;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+/*Estilo paragrafo sessão principal*/
+
+.sec-principal p{
+    font-size: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+/*Ajuste de posição do botão dentro da section principal*/
+.sec-principal .button{
+    position: relative;
+
+}
+
+/*classe responsável por posicionar o elemento (seta) abaixo do botão da classe principal*/
+.sec-principal .button::after{
+    content: '';
+    background: url("img/arrow-curve.svg"); /* imagem colocada diretamente no css*/
+    position: absolute;
+    top: 5rem;
+    right: -4rem;
+    height: 48px;
+    width: 132px;    
+}
+
+/* classe que harmoniza o posicionamento da decoração em relação ao texto na classe principal sem ela o elemento sobe para o inicio da página*/
+.decoracao{
+    display: block;
+    position: relative;
+}
+
+/*Define o posicionamento da decoração para um determinado espaço logo após o texto, sem o pseudo-elemento ::after a decoração não fica visivel */
+.decoracao::after{
+    content: '';
+    background: url("img/three-dashes.svg"); /* imagem colocada diretamente no css*/
+    position: absolute;
+    top: -0.75rem;
+    height: 36px;
+    width: 40px;
+
+
+}
+
+/*Classe da section que contem todos os cards dos guias (cursos)*/
+.sec-cursos{
+    padding-bottom: 8rem;
+}
+
+/*Classe da div que engloba todos os articles*/
+.cards-cursos{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.25rem;
+    margin-top: -8rem;
+    margin-bottom: 4rem;
+}
+
+/*Classe que corresponde ao estilo, espaçamento de cada card individual em seu conteúdo interno */
+.card{
+    background-color: var(--verde-principal);
+    border: 2px solid var(--cor-preta);
+    box-shadow: 4px 4px 0 var(--cor-preta);
+    max-width: 17rem;
+    padding: 2rem 0 0 2rem;
+}
+
+/*alinhamento e cor dos cards pares*/
+.card:nth-child(2n){
+    align-self: end;
+    background-color: var(--verde-secundario);
+}
+
+/*Ajuste da disposição, espaçamento e tamanho da fonte do conteúdo escrito do card*/
+.card strong{
+    display: block;
+    font-size: 1.5rem;
+    margin: 1rem 1rem 0;
+}
+
+
+/*Alinhando o paragrafo dos cards*/
+.alinha-txt{
+    text-align: left;
+    word-wrap: break-word;
+    margin: 0.4rem;
+   
+}
+
+/*Links dos cards ajustando a seta para direita e direcionando para abaixo no componente*/
+.card a{
+    display: block;
+    margin: 3rem 0 0 auto;
+    width: fit-content; /*Largura se ajusta ao conteúdo*/
+}
+
+
+
+footer{
+    border-bottom: 0;
+    padding: 1rem 1.25rem 4rem; /*1rem para cima, 1.25rem para os lados, 4rem para baixo*/
+    text-align: center;
+}
+
+footer nav a{
+    display: block;
+    padding-left: 0;
+    text-align: center;
+}
+
+
+ 
+/*Ajustes gerais nos elementos da classe download-mat no footer: tag p e do botão (conteúdo download)*/
+.download-mat,button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: auto;
+    font-weight: bold;
+    font-size: 1.1rem;  /* tamanho fonte do botão -- 17.6px*/
+    
+
+}
+
+/*Ajuste de espaçamento e tamanho da fonte na tag p no footer (conteúdo download)*/
+.about-mat{
+    margin: 0.5rem;
+    padding: 0.3rem;
+    font-size: 1.3rem; /*tamanho da fonte da tag p -- 20.8px */
+    
+
+}
+
+/*mudando a cor do botão no footer ao passar o mouse (conteúdo download)*/
+.download-mat.div, button:hover{
+    background-color: var(--cor-branca);
+}
+
+
+/* Classes genericas para ajustar as margens e textos*/
+
+.margem-topo-1{
+    margin-top: 1rem;
+}
+
+.margem-topo-2{
+    margin-top: 2rem;
+}
+
+.margem-baixo-1{
+    margin-bottom: 1rem;
+}
+
+.margem-baixo-2{
+    margin-bottom: 2rem;
+}
+
+.mx-auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.texto-primario{
+    color: var(--verde-principal);
+}
+
+.texto-centro{
+    text-align: center;
+}
+
+
+/*--------------------------------*/
+
+
+/* Seção de estatísticas */
+.sec-estatisticas {
+  padding: 4rem 2.25rem;
+  border: 1px solid var(--cor-preta);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+/* Layout da seção lado a lado */
+.estatisticas-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
+/* Texto descritivo da seção */
+.texto-estatisticas {
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  max-width: 50rem;
+  text-align: center;
+}
+
+
+
+.texto-estatisticas h2 {
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+  color: var(--cor-preta);
+  position: relative;
+}
+
+
+.texto-estatisticas h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4rem;
+  height: 0.25rem;
+  background-color: var(--verde-principal);
+  border-radius: 1rem;
+}
+
+
+.texto-estatisticas p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--cor-preta);
+}
+
+/* Grid dos cards */
+.cards-estatisticas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 24rem;
+  margin: 0 auto;
+}
+
+/* Novo estilo exclusivo para cards da seção estatísticas */
+.card-estatistica {
+  background-color: var(--cor-branca);
+  border: 2px solid var(--cor-preta);
+  box-shadow: 4px 4px 0 var(--cor-preta);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+  min-height: 16rem;
+
+
+}
+
+/* Título com destaque */
+.card-estatistica .tag-titulo {
+  background-color: var(--verde-secundario);
+  color: var(--cor-preta);
+  font-weight: 700;
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+ 
+}
+
+
+
+
+/* Estilo do parágrafo */
+.card-estatistica p {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+  padding: 0 0.25rem;
+  margin: 0;
+}
+
+/*posicionamento do texto*/
+.card-estatistica .tag-titulo,
+.card-estatistica .fonte {
+  text-align: center;
+}
+
+
+/* Ícone */
+.card-estatistica .icone {
+  color: #4caf50;
+  margin-right: 0.4rem;
+}
+
+/* Fonte da fonte */
+.card-estatistica .fonte {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--cor-preta);
+}
+
+
+
+/* RESPONSIVIDADE DO SITE */
+
+/* Responsivo: grid 2x2 em telas maiores */
+@media screen and (min-width: 64rem) {
+  .estatisticas-layout {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .cards-estatisticas {
+    grid-template-columns: 1fr 1fr;
+    max-width: 36rem;
+  }
+}
+
+
+
+/* Telas: 40rem -- 640px*/
+@media screen and (min-width: 40rem) {
+    header nav{
+        display: block;
+        text-align: center;
+    }
+
+    .cards-cursos{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card:nth-child(2n){
+        margin-top: 1rem; /*margem pra cima então empurra o itens para baixo*/
+    }
+
+}
+
+ /* Telas 48rem -- 768px*/
+@media screen and (min-width: 48rem){
+    header div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    header img,
+    header nav,
+    header .button{
+        margin: 0;
+    }
+
+}
+
+ /*Tamanho Desktop 72rem -- 1152px*/
+
+@media  screen and (min-width: 72rem) {
+    
+    h1, h2 {
+        font-size: 4rem;
+    } /*Ajustar o texto para o tamanho de 64px*/
+    
+    .container{
+        display: flex;
+        align-items:center;
+        margin: 0 auto; /* 0 ne vertical, auto na horizontal */
+        max-width: 72rem;
+        
+        
+       
+    }
+
+
+/*Ajustando o texto para esquerda*/
+    .container.row-reverse{
+        flex-direction: row-reverse;
+    }
+
+    /*Ajuste sutil nos elementos do footer desktop */
+    .about-column{
+        text-align: justify;
+
+    } 
+
+    /*Ajustes no paragrafo*/
+    .about-column p{
+        font-size: 1.25rem;
+        max-width: 16rem;
+        text-align: center;
+    } 
+
+
+    /*ajustando o espaço que os links da nav vão ocupar no footer*/
+    footer nav{
+        flex: 2;
+    
+    } 
+
+}
+ 
+/* Telas full hd 80rem -- 1280px*/
+@media screen and (min-width: 80rem){
+
+    .container{
+        max-width: 80rem;
+    }
+}
+

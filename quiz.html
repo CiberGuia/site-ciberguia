@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="icon" href="img/icon.png">
+    <script src="quiz.js" async></script> <!--async: js só roda quando o html for carregado-->
+    <title>QUIZ - CIBER GUIA</title>
+</head>
+
+<body>
+    <header class="header">
+        <img class="img-header" src="img/3x.svg" alt="Logo Ciber Guia">
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="cursos.html">Guias</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+        <h1>QUIZ - CIBER GUIA</h1>
+    </header>
+
+    <main class="main-content">
+        <div class="container-quiz container">
+            <div class="container-perguntas esconde-elemento">
+                <div class="contador-pergunta">Pergunta 1 de 12</div> <!-- NOVO -->
+                <div class="progresso-container">
+                    <div class="progresso-barra" style="width: 0%;"></div>
+                </div>
+                <span class="perguntas">Pergunta</span>
+                <div class="respostas-container">
+                    <button class="resposta button-quiz">Resposta 1</button>
+                    <button class="resposta button-quiz">Resposta 2</button>
+                    <button class="resposta button-quiz">Resposta 3</button>
+                    <button class="resposta button-quiz">Resposta 4</button>
+                </div>
+            </div>
+            <div class="controla-container">
+                <button class="start-quiz button-quiz">Começar Quiz!</button>
+                <button class="prox-pergunta button-quiz esconde-elemento">Próxima Pergunta</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Ciber Guia. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

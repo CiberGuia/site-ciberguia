@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIBER GUIA</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="img/icon.png">
+</head>
+
+<body>
+    <header>
+        <div class="container"> <!--Classe para alinhar componentes no modo responsivo-->
+            <a href="index.html"><img src="img/3x.svg" alt="Logo Ciber Guia"></a>
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="cursos.html">Guias</a>
+                <a href="about.html">Sobre nós</a>
+                <a href="contato.html">Contato</a>
+                <a href="Dowload.html">Downloads</a>
+            </nav>
+            <a href="quiz.html" class="button margem-topo-1 margem-baixo-1 mx-auto"> QUIZ CIBER GUIA</a>
+        </div>
+    </header>
+
+    <main><!--Inicio conteúdo principal-->
+        <section class="sec-principal">
+            <!-- section para a primeira parte do site || Classe sec-principal ajusta o padding dos elementos-->
+            <div class="container row-reverse">
+                <!-- Nesta div a classe apenas reverte a posição do texto da sessão principal para o lado esquerdo em telas maiores-->
+                <img src="img/842x561.png"
+                    alt="Uma pessoa segurando um notebook com elementos de segurança em sua volta">
+                <div> <!--Div para agrupar o texto de chamada + botão (link)-->
+                    <h1 class="margem-topo-2">Sinta-se <span class="texto-primario decoracao">Protegido</span> na
+                        internet</h1> <!--Texto principal-->
+                    <p class="margem-topo-2 margem-baixo-2">Nos dias de hoje, é essencial compreender a importância da
+                        segurança digital. Neste guia, você aprenderá sobre as principais ameaças cibernéticas, como
+                        elas podem afetar você, e o mais importante, como se proteger de forma eficaz.</p>
+                    <a href="cursos.html" class="button">Comece agora</a><!--Botão comece agora-->
+                </div><!-- Fim div chamada + botao/link -->
+            </div>
+        </section>
+
+        <section class="sec-cursos">
+            <!--Secition para construir os cards dos guias sendo cada um, um article de conteudo independente mas relacionado-->
+            <div class="cards-cursos"><!--Inicio guias-->
+                <article class="card"> <!--Primeiro Guia-->
+                    <img src="img/malware-r.png" alt="ícone de um malware">
+                    <strong>Malware</strong>
+                    <p class="alinha-txt">O que é um Malware? Aprenda hoje como passar longe deles!</p>
+                    <a href="Malware.html" target="_blank">
+                        <img src="img/arrow-right.svg" alt="Ir para pagia da guia">
+                    </a>
+                </article>
+
+                <article class="card"> <!--Segundo guia-->
+                    <img src="img/hackear-r.png" alt="ícone de wifi">
+                    <strong>Redes Públicas</strong>
+                    <p class="alinha-txt">Qual seria o risco de acessar Wi-Fi de uma rede publica, vamos entender?</p>
+                    <a href="redes-publicas.html">
+                        <img src="img/arrow-right.svg" alt="ir para página do guia">
+                    </a>
+                </article>
+
+
+                <article class="card"> <!--Terceiro Guia-->
+                    <img src="img/hackear-rr.png" alt="ícone celular">
+                    <strong>Furto de celular</strong>
+                    <p class="alinha-txt">Entenda os riscos do furto de celular e como se proteger, afinal guardamos
+                        informações valiosas no telefone</p>
+                    <a href="furto-celular.html">
+                        <img src="img/arrow-right.svg" alt="ir para página do guia">
+                    </a>
+                </article>
+
+                <article class="card"> <!--Quarto guia-->
+                    <img src="img/venda-online-r.png" alt="ícone de um computador">
+                    <strong>Comércio via Internet</strong>
+                    <p class="alinha-txt">Obtenha o conhecimento para reconhecer golpes de ofertas falsas ou sites
+                        suspeitos. </p>
+                    <a href="comercio-inter.html">
+                        <img src="img/arrow-right.svg" alt="ir para página do guia">
+                    </a>
+                </article>
+            </div><!--Fim div contendo os cards dos guias -->
+            <h2 class="texto-centro">E <span class="texto-primario">vários</span> Outros Guias!</h2>
+            <a href="cursos.html" class="button margem-topo-2 mx-auto">Conheça mais</a>
+        </section> <!--FIM SECTION GUIAS-->
+
+    </main><!--FIM MAIN-->
+
+
+    <section class="sec-estatisticas">
+        <div class="estatisticas-layout">
+            <div class="texto-estatisticas">
+                <h2>Estatísticas Reais</h2>
+                <p>Dados que evidenciam a importância da segurança digital no cotidiano dos brasileiros.</p>
+            </div>
+
+            <div class="cards-estatisticas">
+                <article class="card-estatistica">
+                    <span class="tag-titulo">SITES FALSOS</span>
+                    <p><span class="icone">✦</span> 65% dos brasileiros não conseguem identificar sites falsos.</p>
+                    <span class="fonte">FONTE: KASPERSKY</span>
+                </article>
+
+                <article class="card-estatistica">
+                    <span class="tag-titulo">APLICATIVOS FALSOS</span>
+                    <p><span class="icone">✦</span>Em 2024, a quantidade de aplicativos falsos cresceu 146% no Brasil entre abril e junho.</p>
+                    <span class="fonte">FONTE: DFNDR LAB</span>
+                </article>
+
+                <article class="card-estatistica">
+                    <span class="tag-titulo">PHISHING</span>
+                    <p><span class="icone">✦</span> 3,5 milhões de brasileiros foram vítimas de phishing em 2023.</p>
+                    <span class="fonte">FONTE: REDBELT SECURITY</span>
+                </article>
+
+                <article class="card-estatistica">
+                    <span class="tag-titulo">GOLPES NO WHATSAPP</span>
+                    <p><span class="icone">✦</span> Em 2024, foram registrados 153 mil casos de golpes via WhatsApp no Brasil.</p>
+                    <span class="fonte">FONTE: FEBRABAN </span>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer><!--Inicio do footer-->
+        <div class="container"> <!--Classe para alinhar componentes no modo responsivo-->
+            <div class="about-column"><!--Div responsável por alinhar texto e a logo no footer em telas maiores-->
+                <img src="img/230-132.svg" alt="Logo Ciber Guia" class="amargem-baixo-1 margem-topo-1">
+                <p class="margem-baixo-2">Site desenvolvido para fins Educacionais.</p>
+            </div>
+            <nav class="margem-baixo-2">
+                <a href="index.html">Início</a>
+                <a href="cursos.html">Guias</a>
+                <a href="about.html">Sobre nós</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+
+            <div class="download-mat"><!--Div para ajustar os componentes do material de download-->
+                <p class="about-mat">Faça download do Guia em PDF</p>
+                <button class="button margem-baixo-2" onclick="window.location.href='Dowload.html'">Baixar Guia</button>
+            </div>
+        </div>
+        </div>
+    </footer><!--Fim footer-->
+</body>
+
+</html>
